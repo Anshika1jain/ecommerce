@@ -321,7 +321,27 @@ body {
     color: #666;
     margin-bottom: 5px;
 }
-
+.testimonial-button {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #7da07d;
+    color: white;
+    border: none;
+    width: 150px;
+    height: 70px;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 16px;
+    text-align: center;
+    position: absolute;
+    display: block;
+    margin: 0 auto;
+    margin-left: 45%;
+  }
+  
+  .testimonial-button:hover {
+    background-color: #bbc574;
+  }
 
 #product1 .pro{
     width: 23%;
