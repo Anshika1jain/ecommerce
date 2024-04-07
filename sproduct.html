@@ -53,7 +53,7 @@
                 <option>XL</option>
             </select>
             <input type="number" value="1">
-            <button class="normal">Add To Cart</button>
+            <button class="add-to-cart-button">Add To Cart</button>
             <h4>Product Details</h4>
             <span>The Gliden Ultra Cotton T-Shirts is made from substantiable 6.0 oz. per sq. yd. fabric constructed from 100% cotton.</span>
             <h2>10% off</h2>
@@ -88,7 +88,7 @@
             <td>Puple, Black, Light Blue, Navy Blue</td>
           </tr>
           <tr class="highlight">
-            <td colspan="2" style="text-align: center;"><a href="cart.html">Add to Cart</a></td>
+            <td colspan="2" style="text-align: center;"><a href="#">Add to Cart</a></td>
           </tr>
         </table>
       </div>
@@ -270,6 +270,37 @@
                 }
             }, 1000);
         });
+
+        // add to cart 
+        document.addEventListener("DOMContentLoaded", function() {
+    var addToCartButton = document.querySelector(".add-to-cart-button");
+
+    // Function to add product to the cart
+    function addToCart() {
+        // Get product details
+        var productImage = document.querySelector("#prodetails .single-pro-image img").src;
+        var productName = document.querySelector("#prodetails .single-pro-details h4").textContent;
+        var productPrice = document.querySelector("#prodetails .single-pro-details h3").textContent;
+
+        // Create new cart item row
+        var cartItem = document.createElement("tr");
+        cartItem.innerHTML = `
+            <td><a href="#"><i class="far fa-times-circle"></i></a></td>
+            <td><img src="${productImage}" alt=""></td>
+            <td>${productName}</td>
+            <td>${productPrice}</td>
+            <td><input type="number" value="1"></td>
+            <td>${productPrice}</td>
+        `;
+
+        // Append the new cart item row to the cart table
+        var cartTableBody = document.querySelector("#cart tbody");
+        cartTableBody.appendChild(cartItem);
+    }
+
+    // Add click event listener to the "Add to Cart" button
+    addToCartButton.addEventListener("click", addToCart);
+});
 </script>
 
 

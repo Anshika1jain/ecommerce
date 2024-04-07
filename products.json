@@ -1,0 +1,33 @@
+[
+    {
+        "id": 1,
+        "name": "Women dress-tops",
+        "price": "Rs.250",
+        "image":"promotion/t3.png"
+    },
+    {
+        "id": 2,
+        "name": "Women dress-tops",
+        "price": "Rs.250",
+        "image":"promotion/2.png"
+    },
+    {
+        "id": 3,
+        "name": "Women dress-tops",
+        "price": "Rs.250",
+        "image":"promotion/3.png"
+    },
+    {
+        "id": 4,
+        "name": "Women dress-tops",
+        "price": "Rs.250",
+        "image":"promotion/4.png"
+    },
+    {
+        "id": 5,
+        "name": "Women dress-tops",
+        "price": "Rs.250",
+        "image":"promotion/5.png"
+    }
+    
+]
